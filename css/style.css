@@ -1,0 +1,492 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #444;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    position: relative;
+    min-height: 850px; /* Increase the height to show more of the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden; /* Ensures the pseudo-element stays within the container */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/restaurant.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    filter: blur(5px);
+    z-index: -1; /* Ensures the background image stays behind the text */
+    opacity: 0.8; /* Slight opacity for a more subtle effect */
+}
+
+.hero h2, .hero p, .hero button {
+    position: relative;
+    z-index: 1; /* Ensures text and button are above the background */
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 12px 20px;
+    font-size: 1em;
+    background-color: #ff9900;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero button:hover {
+    background-color: #e68a00;
+}
+/* Grid styling for the menu page */
+.menu-section.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.menu-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.menu-item h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.menu-item p {
+    font-size: 0.9em;
+    margin: 10px 0;
+    color: #555;
+}
+
+.menu-item button {
+    padding: 8px 16px;
+    background-color: #ff9900;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.menu-item button:hover {
+    background-color: #e68a00;
+}
+
+.menu-filters {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.filter-container {
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-container label {
+    font-size: 1em;
+    color: #555;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.filter-container select {
+    padding: 8px 12px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.filter-container select:focus {
+    border-color: #ff9900;
+    outline: none;
+}
+
+.filter-container select:hover {
+    border-color: #e68a00;
+}
+
+ .menu-item img {
+    width: 150px;          /* Sets a fixed width */
+    height: 150px;         /* Sets a fixed height */
+    object-fit: cover;     /* Ensures the image fills the specified dimensions without distortion */
+    border-radius: 8px;    /* Adds a rounded border for visual appeal */
+}
+
+
+
+/* Center quantity controls specifically on the menu page */
+#menu .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+}
+
+#menu .quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+#menu .quantity-control button {
+    padding: 5px 10px;
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#menu .quantity-control button:hover {
+    background-color: #e68a00;
+}
+
+#menu .quantity-control span {
+    font-size: 1em;
+    font-weight: bold;
+}
+/* Cart page styling with grid layout for cart items */
+.cart-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;                     /* Horizontal alignment of image and details */
+    align-items: flex-start;           /* Aligns image and text at the top */
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+    width: 80px;                       /* Sets a fixed size for the image */
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;                /* Space between image and text */
+}
+
+.cart-item-details {
+    display: flex;
+    flex-direction: column;            /* Stacks text items vertically */
+    justify-content: space-between;    /* Evenly spaces items from top to bottom */
+    height: 100%;                      /* Makes the details container take full height of .cart-item */
+}
+
+.cart-item-details h3 {
+    margin: 0 0 8px 0;                 /* Adds space below the title */
+    font-size: 1.1em;
+    color: #333;
+}
+
+.cart-item-details .price, 
+.cart-item-details .quantity-control, 
+.cart-item-details .subtotal, 
+.cart-item-details .remove-button {
+    margin: 5px 0;                     /* Adds space between each line of text */
+}
+
+
+.remove-button {
+    padding: 5px 10px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.remove-button:hover {
+    background-color: #cc0000;
+}
+
+
+.total-section {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.total-section p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px; /* Space between total and button */
+}
+
+.checkout-button {
+    padding: 12px 20px;
+    background-color: #ff9900;
+    color: white;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Center the button */
+    display: inline-block;
+}
+
+.checkout-button:hover {
+    background-color: #e68a00;
+}
+
+.empty-cart-message {
+    text-align: center;
+    font-size: 1.5em;
+    color: #888;
+    margin: 20px 0;
+}
+
+/* Disabled checkout button style */
+.checkout-button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.quantity-control button {
+    padding: 5px 10px;
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.quantity-control button:hover {
+    background-color: #e68a00;
+}
+
+.quantity-control span {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 5px;
+}
+/* Styling for the reservation page */
+.reservation-section {
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.reservation-section p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reservation-form label {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.reservation-form input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.reservation-form input:focus {
+    border-color: #ff9900;
+    outline: none;
+}
+
+.reservation-form button {
+    padding: 12px 20px;
+    background-color: #ff9900;
+    color: white;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reservation-form button:hover {
+    background-color: #e68a00;
+}
+
+/* Styling for the contact page */
+.contact-section {
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-section p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-size: 1em;
+    color: #555;
+    text-align: left;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #ff9900;
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form button {
+    padding: 12px 20px;
+    background-color: #ff9900;
+    color: white;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #e68a00;
+}
+

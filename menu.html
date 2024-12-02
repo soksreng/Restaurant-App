@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Menu - Jacksian</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/menu.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Our Menu</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reservation.html">Reservations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="menu-filters">
+        <div class="filter-container">
+            <label for="category">Filter by Category:</label>
+            <select id="category" onchange="filterMenu()">
+                <option value="all">All</option>
+                <option value="appetizers">Appetizers</option>
+                <option value="mains">Main Courses</option>
+                <option value="desserts">Desserts</option>
+                <option value="drinks">Drinks</option>
+            </select>
+        </div>
+    </section>
+    <div id="menu" class="menu-section grid"></div>
+</body>
+</html>

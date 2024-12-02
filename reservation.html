@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservations - Jacksian Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/reservation.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Reserve a Table</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="reservation-section">
+        <h2>Book Your Experience</h2>
+        <p>Reserve a table in advance to ensure a perfect dining experience.</p>
+        <form id="reservation-form" class="reservation-form">
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+            
+            <label for="time">Time:</label>
+            <input type="time" id="time" required>
+            
+            <label for="party-size">Party Size:</label>
+            <input type="number" id="party-size" min="1" max="10" required>
+            
+            <button type="button" onclick="submitReservation()">Reserve Table</button>
+        </form>
+    </section>
+</body>
+</html>

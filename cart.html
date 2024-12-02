@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cart - Jacksian Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/cart.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Your Cart</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Reservations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="cartItems" class="cart-grid">
+        <!-- Cart items will be dynamically inserted here from cart.js -->
+    </section>
+    <div class="total-section">
+        <p id="total">Total: $0.00</p>
+        <button onclick="checkout()" class="checkout-button">Proceed to Checkout</button>
+    </div>
+</body>
+</html>
