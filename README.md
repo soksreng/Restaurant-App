@@ -21,7 +21,7 @@ This is a simple web-based restaurant application that allows users to browse me
 1. **Download or Clone the Project**
    - Clone the repository using Git:
      ```bash
-     git clone https://github.com/your-repository-url.git
+     git clone https://github.com/soksreng/Restaurant-App.git
      ```
    - Or download the ZIP file from the repository and extract it.
 
